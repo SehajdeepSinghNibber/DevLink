@@ -6,7 +6,7 @@ import { YSocketIO } from 'y-socket.io/dist/server'
 const app = express();
 app.use(express.json())
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 const httpServer = createServer(app);
 
